@@ -20,7 +20,7 @@
 
     <div class="banner-main-slider-item"
         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/home_bg_3.webp');">
-        >
+         
         <div class="container">
             <div class="banner_content text_center">
                 <h2 class="f_80 color_white" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true">
@@ -37,7 +37,7 @@
 
     <div class="banner-main-slider-item"
         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/home_bg_1.webp');">
-        >
+       
         <div class="container">
             <div class="banner_content text_center">
                 <h2 class="f_80 color_white" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true">

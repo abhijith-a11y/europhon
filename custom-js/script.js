@@ -9,6 +9,14 @@ function resetMenuAnimation(menu) {
     items.forEach(item => item.classList.remove("show-item"));
 }
 
+// Reset CTA animation
+function resetCTAAnimation() {
+    const cta = document.querySelector(".nav-cta");
+    if (cta) {
+        cta.classList.remove("show-item");
+    }
+}
+
 // Reset menu state: show main menu, hide submenu
 function resetMenuState() {
     const mainMenu = document.querySelector(".nav_listing_main");
@@ -19,6 +27,7 @@ function resetMenuState() {
     // Reset animations for both menus
     resetMenuAnimation(mainMenu);
     resetMenuAnimation(subMenu);
+    resetCTAAnimation();
 
     mainMenu.classList.remove("hide_menu");
     mainMenu.classList.add("show_menu");
@@ -60,6 +69,14 @@ function openOffcanvas(id) {
         const mainMenu = offcanvas.querySelector(".nav_listing_main");
         animateMenu(mainMenu);
 
+        // Animate CTA with the same show-item effect (slightly delayed after menu)
+        setTimeout(() => {
+            const cta = document.querySelector(".nav-cta");
+            if (cta) {
+                cta.classList.add("show-item");
+            }
+        }, 250);
+
     }, 200);
 
     document.body.style.overflow = "hidden";
@@ -76,6 +93,7 @@ function closeOffcanvas(id) {
     resetMenuAnimation(mainMenu);
     resetMenuAnimation(subMenu);
     resetMenuState();
+    resetCTAAnimation();
     
     // Hide product image container
     if (productImageContainer) {
@@ -420,8 +438,9 @@ jQuery(document).ready(function ($) {
     var header = $('.site-header');
     var logo = $('#header-logo');
     
-    // Check if elements exist before proceeding
+    // Check if header exists before proceeding
     if (header.length === 0) {
+        console.warn('Header element (.site-header) not found');
         return;
     }
     
@@ -561,33 +580,41 @@ jQuery(document).ready(function ($) {
     // Optimized scroll handler with requestAnimationFrame throttling
     function updateHeader() {
         try {
-            var scrollTop = $(window).scrollTop() || window.pageYOffset || document.documentElement.scrollTop || 0;
+            // Get scroll position using multiple fallbacks
+            var scrollTop = window.pageYOffset || 
+                           document.documentElement.scrollTop || 
+                           document.body.scrollTop || 
+                           $(window).scrollTop() || 
+                           0;
             
-            if (scrollTop > scrollThreshold && !isScrolled) {
-                // Just scrolled down - transition to scrolled logo
-                isScrolled = true;
-                // Add class synchronously (not in requestAnimationFrame) for immediate application
-                header.addClass('scrolled');
-                
-                // Get dimensions before switching if not already stored
-                if (logo.length > 0 && (!originalWidth || !originalHeight)) {
-                    getOriginalDimensions();
+            if (scrollTop > scrollThreshold) {
+                // Scrolled past threshold - add scrolled class
+                if (!isScrolled) {
+                    isScrolled = true;
+                    // Add class immediately
+                    header.addClass('scrolled');
+                    
+                    // Get dimensions before switching if not already stored
+                    if (logo.length > 0 && (!originalWidth || !originalHeight)) {
+                        getOriginalDimensions();
+                    }
+                    
+                    // Use the same smooth transition function
+                    if (scrolledLogo) {
+                        transitionLogo(scrolledLogo, '58px', '50px');
+                    }
                 }
-                
-                // Use the same smooth transition function
-                if (scrolledLogo) {
-                    transitionLogo(scrolledLogo, '58px', '50px');
-                }
-                
-            } else if (scrollTop <= scrollThreshold && isScrolled) {
-                // Just scrolled up - transition back to default logo
-                isScrolled = false;
-                // Remove class synchronously (not in requestAnimationFrame) for immediate application
-                header.removeClass('scrolled');
-                
-                // Use the same smooth transition function
-                if (defaultLogo) {
-                    transitionLogo(defaultLogo, null, null);
+            } else {
+                // Scrolled back to top - remove scrolled class
+                if (isScrolled) {
+                    isScrolled = false;
+                    // Remove class immediately
+                    header.removeClass('scrolled');
+                    
+                    // Use the same smooth transition function
+                    if (defaultLogo) {
+                        transitionLogo(defaultLogo, null, null);
+                    }
                 }
             }
         } catch (e) {
@@ -597,12 +624,21 @@ jQuery(document).ready(function ($) {
         }
     }
     
+    // Attach scroll event handler
     $(window).on('scroll', function() {
         if (!ticking) {
             window.requestAnimationFrame(updateHeader);
             ticking = true;
         }
     });
+    
+    // Also use native scroll event as fallback
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(updateHeader);
+            ticking = true;
+        }
+    }, { passive: true });
     
     // Initial check on page load - use setTimeout to ensure DOM is fully ready
     setTimeout(function() {
@@ -613,7 +649,83 @@ jQuery(document).ready(function ($) {
     $(window).on('load', function() {
         updateHeader();
     });
+    
+    // Additional check when DOM is fully interactive
+    if (document.readyState === 'complete') {
+        updateHeader();
+    } else {
+        window.addEventListener('load', function() {
+            updateHeader();
+        });
+    }
 });
+
+// Vanilla JS fallback for header scroll effect (ensures it works even if jQuery fails)
+(function() {
+    'use strict';
+    
+    function initHeaderScroll() {
+        var header = document.querySelector('.site-header');
+        
+        if (!header) {
+            return; // Header not found, exit
+        }
+        
+        var scrollThreshold = 50;
+        var isScrolled = false;
+        var ticking = false;
+        
+        function updateHeaderClass() {
+            if (ticking) return;
+            
+            ticking = true;
+            requestAnimationFrame(function() {
+                try {
+                    var scrollTop = window.pageYOffset || 
+                                   document.documentElement.scrollTop || 
+                                   document.body.scrollTop || 
+                                   0;
+                    
+                    if (scrollTop > scrollThreshold) {
+                        if (!isScrolled) {
+                            isScrolled = true;
+                            header.classList.add('scrolled');
+                        }
+                    } else {
+                        if (isScrolled) {
+                            isScrolled = false;
+                            header.classList.remove('scrolled');
+                        }
+                    }
+                } catch (e) {
+                    console.error('Error in vanilla header scroll:', e);
+                } finally {
+                    ticking = false;
+                }
+            });
+        }
+        
+        // Attach scroll listener
+        window.addEventListener('scroll', updateHeaderClass, { passive: true });
+        
+        // Initial check
+        setTimeout(updateHeaderClass, 150);
+        
+        // Check on load
+        if (document.readyState === 'complete') {
+            updateHeaderClass();
+        } else {
+            window.addEventListener('load', updateHeaderClass);
+        }
+    }
+    
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initHeaderScroll);
+    } else {
+        initHeaderScroll();
+    }
+})();
 
 // ==================== Products Slides Zoom-in Animation ====================
 jQuery(document).ready(function ($) {

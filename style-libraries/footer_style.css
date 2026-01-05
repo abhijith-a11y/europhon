@@ -30,7 +30,7 @@
     border-radius: 100px;
     letter-spacing: 1px;
     outline: none;
-    height: 56px;
+    height:46px;
 }
 
 .qr-form input,
@@ -159,7 +159,7 @@ footer {
     .footer-links a,
     .qr-form input,
     .qr-form input::placeholder {
-        font-size: 16px;
+        font-size: 12px;
     }
 }
 

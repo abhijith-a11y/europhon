@@ -132,11 +132,11 @@
     align-items: center;
     border-bottom: 1px solid #9A9A92;
     padding: 0px 40px;
-    height: 70px;
+    height: 55px;
 }
 
 .card-header h2 {
-    font-size: 22px;
+    font-size: 15px;
     font-family: "RivieraNights-Regular";
     color: #fff;
 }
@@ -200,8 +200,10 @@
 
 
 /* =========== divider-section end =========== */
-
-
+.card-link{ color: #fff; text-transform: uppercase; text-decoration: underline; margin: 0; padding: 0;}
+.deail_tag { padding: 0; margin: 0;}
+.deail_tag li { list-style: none; display: inline-block; margin-bottom: 5px;}
+.deail_tag li a{  background: rgba(255, 255, 255, 0.8); display: inline-flex; font-size:15px; color: #000; border-radius: 10px; font-weight: 600; display: inline-block; padding: 5px 15px;}
 
 
 
@@ -281,7 +283,7 @@
     }
 
     .card-header h2 {
-        font-size: 18px;
+        font-size: 15px;
     }
 
     .card-header {

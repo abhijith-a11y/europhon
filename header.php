@@ -63,11 +63,9 @@
              <nav>
                 <ul class="nav_listing nav_listing_main">
                     <li>
-                    <a href="#" class="nav-link active">Home</a>
+                    <a href="/about-us" class="nav-link active">About Us</a>
                 </li>
-                <li>
-                    <a href="/about-us" class="nav-link">About Us</a>
-                </li>
+              
                 <li class="sub_menu_1 submenu_desk">
                     <a href="#" class="nav-link sub_nav_link_1">
                         <img class="side_arrow" src="<?php echo get_template_directory_uri(); ?>/images/caret_left.svg" alt="img"> Products</a>
@@ -76,15 +74,27 @@
                     <a href="/products" class="nav-link sub_nav_link_1">
                         Products</a>
                 </li>
+
+
                 <li>
-                    <a href="/news" class="nav-link">News</a>
+                    <a href="/projects" class="nav-link">Projects</a>
                 </li>
                 <li>
                     <a href="/services" class="nav-link">Services</a>
                 </li>
+
                 <li>
-                    <a href="/projects" class="nav-link">Projects</a>
+                    <a href="/commercial-space" class="nav-link">Commercial Space</a>
                 </li>
+                <li>
+                    <a href="/news" class="nav-link">News</a>
+                </li>
+                
+
+                <li>
+                    <a href="/download-center" class="nav-link">Download Center</a>
+                </li>
+                
                 <li>
                     <a href="/career" class="nav-link">Career</a>
                 </li>
@@ -120,6 +130,13 @@
 <!-- sub menu end -->
 
             </nav>
+
+
+
+
+
+
+            <a href="/contact-us" class="btn_style nav-cta">Book Consultation</a>
            </div>
         </div>
     </div>
