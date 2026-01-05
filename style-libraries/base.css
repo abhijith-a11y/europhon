@@ -71,15 +71,15 @@ html {
 }
 
 .f_20 {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .f_18 {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .f_17 {
-    font-size: 16px;
+    font-size: 17px;
 }
 
 p,
@@ -193,28 +193,31 @@ div {
     }
 
     /* fonts */
+}
+
+@media only screen and (max-width: 1680px) {
     .f_36 {
-        font-size: 36px;
+        font-size: 33px;
     }
 
     .f_32 {
-        font-size: 32px;
+        font-size: 30px;
     }
 
     .f_24 {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     .f_20 {
-        font-size: 16px;
-    }
-
-    .f_18 {
         font-size: 18px;
     }
 
+    .f_18 {
+        font-size: 16px;
+    }
+
     .f_17 {
-        font-size: 17px;
+        font-size: 16px;
     }
 }
 
