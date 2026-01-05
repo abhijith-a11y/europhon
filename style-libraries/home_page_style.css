@@ -137,7 +137,8 @@
     opacity: 1;
     pointer-events: auto;
 }
-.waper_banner_mobile{
+
+.waper_banner_mobile {
     display: none;
 }
 
@@ -161,6 +162,7 @@
 .banner-slider-dots {
     position: fixed;
     top: 50%;
+    left: 20px;
     transform: translateY(-50%);
     display: flex;
     align-items: center;
@@ -188,8 +190,8 @@
 
 .banner-slider-dots .banner-dot span.border_dot {
     border: 1px solid #fff;
-    width: 8px;
-    height: 8px;
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -210,8 +212,8 @@
 }
 
 .banner-slider-dots .banner-dot span.inner_dot {
-    width: 6px;
-    height: 6px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
     display: inline-block;
     background: #fff;
@@ -295,7 +297,8 @@
     .highlight_text {
         font-size: 16px;
     }
-	.who_we_are {
+
+    .who_we_are {
         padding: 100px 0px;
     }
 }
@@ -308,17 +311,22 @@
     .banner_sec .btn_style {
         margin-top: 30px;
     }
-.waper_banner_mobile{
-    display: block;
-}
-.waper_page_slider{
-    display: none;
-}
-	.who_we_are {
+
+    .waper_banner_mobile {
+        display: block;
+    }
+
+    .waper_page_slider {
+        display: none;
+    }
+
+    .who_we_are {
         padding: 80px 0px;
     }
 
-    .highlight_text{font-size: 14px;}
+    .highlight_text {
+        font-size: 14px;
+    }
 }
 
 @media only screen and (max-width: 575px) {
