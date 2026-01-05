@@ -1,19 +1,31 @@
 .home_slider_new {
     /* background-color: #861c1c;  */
+  
+    /* height: 100vh; */
+    padding-bottom: 100px;
+
+}
+
+.home_slider_new_wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
+    overflow: hidden;
+    height: calc(100vh - 150px);
 }
 
 .home_slider_new_col_01 {
     /* background-color: #cf1818; */
     width: 52.5%;
+    margin-top: auto;
+    height: calc(100% - 50px);
 }
 
 .home_slider_new_col_02 {
     /* background-color: #18cf27; */
     width: 23%;
+    height: calc(100% - 50px);
 }
 
 .home_slider_new_col_03 {
@@ -50,7 +62,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
     padding: 20px;
     width: 100%;
     position: absolute;
@@ -61,8 +73,8 @@
 }
 
 .shared-pagination .pagination-btn {
-    width: 12px;
-    height: 12px;
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
     border: none;
     background: #000;
@@ -79,8 +91,8 @@
 
 .shared-pagination .pagination-btn.active {
     background: #000;
-    width: 12px;
-    height: 12px;
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
     position: relative;
 }
@@ -95,7 +107,7 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border: 2px solid #fff;
+    border: 1px solid #fff;
     box-sizing: border-box;
 }
 
@@ -105,10 +117,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
-    border: 2px solid #000;
+    border: 1px solid #000;
     box-sizing: border-box;
 }
 
@@ -170,12 +182,43 @@
 
 
 .home_slider_new_col_02 .slide-content {
-    aspect-ratio: 384 / 713;
+    /* aspect-ratio: 384 / 713; */
 }
 
 /* GSAP Mouse Follow Effect for home_slider_new_col_03 */
 .home_slider_new_col_03 {
     cursor: none;
+    height: 500px;
+    margin-top: auto;
+}
+
+.home_slider_new_col_02 {
+    height: 500px;
+    margin-top: auto;
+}
+
+.home_slider_new_col_02 .slide-content {
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+/* .slide_text_top {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} */
+
+
+.home_slider_new_col_02 .slide-content,
+.home_slider_new_col_03 .slide-content {
+    height: 100%;
+}
+
+.home_slider_new_col_03 img {
+    height: 100%;
 }
 
 .custom-mouse-follow {
