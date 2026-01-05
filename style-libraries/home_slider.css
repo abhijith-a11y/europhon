@@ -26,7 +26,6 @@
     /* background-color: #18cf27; */
     width: 23%;
     height: calc(100% - 50px);
-    padding-bottom: 350px;
 }
 
 .home_slider_new_col_03 {
@@ -54,7 +53,6 @@
 
 .slide-content {
     width: 100%;
-    margin-top: auto;
     /* padding: 20px; */
     /* text-align: center; */
 }
@@ -75,8 +73,8 @@
 }
 
 .shared-pagination .pagination-btn {
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
     border: none;
     background: #000;
@@ -122,7 +120,7 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border: 2px solid #000;
+    border: 1px solid #000;
     box-sizing: border-box;
 }
 
@@ -190,6 +188,37 @@
 /* GSAP Mouse Follow Effect for home_slider_new_col_03 */
 .home_slider_new_col_03 {
     cursor: none;
+    height: 500px;
+    margin-top: auto;
+}
+
+.home_slider_new_col_02 {
+    height: 500px;
+    margin-top: auto;
+}
+
+.home_slider_new_col_02 .slide-content {
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+/* .slide_text_top {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} */
+
+
+.home_slider_new_col_02 .slide-content,
+.home_slider_new_col_03 .slide-content {
+    height: 100%;
+}
+
+.home_slider_new_col_03 img {
+    height: 100%;
 }
 
 .custom-mouse-follow {

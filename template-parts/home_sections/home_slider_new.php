@@ -33,21 +33,41 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="slide-content">
-                            <h3 class="f_28">Euro Systems Private Villa Acoustic Ceilings</h3>
+                            <div class="slide_text_top">
+                                <h2 class="f_20 mb_20">Euro Systems Private Villa Acoustic Ceilings</h2>
+                                <!-- <div class="symphony_tagline">Sleek Modern Transparency</div> -->
+                                <p>Symfony® Acoustic Glass Partitions Systems are designed for transparency
+                                    without compromise. Symfony® Acoustic Glass partitions bring clarity,
+                                    openness, and acoustic control into one seamless system. </p>
+                            </div>
+                            <a href="" class="highlight_text mt_50">Discover More</a>
                             <!-- <h4>sleek modern transparency</h4> -->
                             <!-- <p>Symfony® acoustic glass partitions systems are designed for transparency without compromise. Symfony® acoustic glass partitions bring clarity, openness, and acoustic control into one seamless system.</p>      -->
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="slide-content">
-                            <h3 class="f_28">Euro Systems Healthcare Sidra Medical Center</h3>
+                            <div class="slide_text_top">
+                                <h2 class="f_20 mb_20">Euro Systems Healthcare Sidra Medical Center</h2>
+                                <!-- <div class="symphony_tagline">Sleek Modern Transparency</div> -->
+                                <p>Symfony® Acoustic Glass Partitions Systems are designed for transparency
+                                    without compromise. Symfony® Acoustic Glass partitions bring clarity,
+                                    openness, and acoustic control into one seamless system. </p>
+                            </div>
+                            <a href="" class="highlight_text mt_50">Discover More</a>
                             <!-- <h4>sleek modern transparency</h4> -->
                             <!-- <p>Symfony® acoustic glass partitions systems are designed for transparency without compromise. Symfony® acoustic glass partitions bring clarity, openness, and acoustic control into one seamless system.</p>      -->
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="slide-content">
-                            <h3 class="f_28">Euro Systems Private Villa Acoustic Ceilings</h3>
+                            <div class="slide_text_top">
+                                <h2 class="f_20 mb_20">Euro Systems Private Villa Acoustic Ceilings</h2>
+                                <!-- <div class="symphony_tagline">Sleek Modern Transparency</div> -->
+                                <p>Symfony® Acoustic Glass Partitions Systems are designed for transparency
+                                    without compromise. Symfony® Acoustic Glass partitions bring clarity,
+                                    openness, and acoustic control into one seamless system. </p>
+                            </div>
                             <!-- <h4>sleek modern transparency</h4> -->
                             <!-- <p>Symfony® acoustic glass partitions systems are designed for transparency without compromise. Symfony® acoustic glass partitions bring clarity, openness, and acoustic control into one seamless system.</p>      -->
                         </div>
