@@ -170,13 +170,31 @@
 
 .accordion_row_r {
     width: 65%;
+    margin-left: auto ;
+    margin-top:30px;
+    
 }
+
+.content_accordion ul{padding: 0;}
 
 .content_accordion h4 {
     font-size: 17px;
     font-family: "RivieraNights-Bold";
 }
 
+.buttion-row ul{
+    margin: 0; padding: 0; margin-top: 25px;
+}
+
+
+
+.buttion-row ul li{ list-style: none; padding: 0;}
+.buttion-row ul  li::before{ display: none;}
+
+.buttion-row ul { display: flex; align-items: center; gap: 20px;}
+
+
+.content_accordion li .link-txt{ text-decoration: underline;}
 .content_accordion li {
     position: relative;
     padding-left: 20px;
@@ -586,3 +604,16 @@
     .option-label{font-size: 14px;}
     .tab{font-size: 14px;}
 }
+
+
+.accordion_row_rb{ margin-left: auto;}
+
+.accordion_row_rb_list{ display: flex; flex-direction: column; gap: 10px;}
+.accordion_row_rb_list li{ width:100% ; padding: 0; margin: 0; list-style: none; display: flex; align-items: center; padding-bottom:15px; }
+.accordion_row_rb_list  li::before{ display: none;}
+
+.accordion_row_rb_list{ display: flex; flex-wrap: wrap; margin: 0; padding: 0;}
+
+.accordion_row_rb_list_item_title{ width: 45%; font-weight: 600; font-size:15px;}
+.accordion_row_rb_list_item_value{ width: 55%; font-size: 15px;  font-weight:400;}
+
