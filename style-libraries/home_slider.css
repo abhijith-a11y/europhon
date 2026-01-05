@@ -1,14 +1,25 @@
-.home_slider_new{ 
-    background-color: #861c1c; 
-    display: flex;  
-    flex-wrap: wrap; 
+.home_slider_new {
+    /* background-color: #861c1c;  */
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
 }
 
-.home_slider_new_col_01{ background-color: #cf1818; width:52.5%;}
-.home_slider_new_col_02{ background-color: #18cf27; width: 23%;}
-.home_slider_new_col_03{ background-color: #6d18cf; width: 20%;}
+.home_slider_new_col_01 {
+    /* background-color: #cf1818; */
+    width: 52.5%;
+}
+
+.home_slider_new_col_02 {
+    /* background-color: #18cf27; */
+    width: 23%;
+}
+
+.home_slider_new_col_03 {
+    /* background-color: #6d18cf; */
+    width: 20%;
+}
 
 /* Swiper Slider Styles */
 .slider-col-01,
@@ -20,7 +31,8 @@
 }
 
 .slider-col-01 .swiper-slide,
-.slider-col-03 .swiper-slide, .home_slider_new_col_02 .swiper-slide {
+.slider-col-03 .swiper-slide,
+.home_slider_new_col_02 .swiper-slide {
     height: auto;
     display: flex;
     align-items: center;
@@ -122,21 +134,44 @@
 }
 
 
-.shared-pagination-wrapper .shared-pagination{ position: unset;
+.shared-pagination-wrapper .shared-pagination {
+    position: unset;
 
 }
 
-.shared-pagination-wrapper { width: 100%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px;}
+.shared-pagination-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
 
-.slider-col-03 .swiper-slide, .home_slider_new_col_02 .swiper-slide{ align-items: flex-end;}
+.slider-col-03 .swiper-slide,
+.home_slider_new_col_02 .swiper-slide {
+    align-items: flex-end;
+}
 
-.slide-content-inner{ width: 100%;  aspect-ratio: 384/823;}
-.slide-content-inner-img img{ width: 100%;  height: 100%; object-fit: cover;}
+.slide-content-inner {
+    width: 100%;
+    aspect-ratio: 384/823;
+}
 
-.home_slider_new_col_02  .slide-content-inner {     aspect-ratio: 384 / 730;}
+.slide-content-inner-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.home_slider_new_col_02 .slide-content-inner {
+    aspect-ratio: 384 / 730;
+}
 
 
-.home_slider_new_col_02 .slide-content{     aspect-ratio: 384 / 713;}
+.home_slider_new_col_02 .slide-content {
+    aspect-ratio: 384 / 713;
+}
 
 /* GSAP Mouse Follow Effect for home_slider_new_col_03 */
 .home_slider_new_col_03 {
@@ -158,11 +193,3 @@
     mix-blend-mode: difference;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
-
-
-
-
-
-
-
-

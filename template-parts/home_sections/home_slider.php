@@ -249,9 +249,6 @@ transition:0.3s linear;
     padding-right: 0px;
 }
    }
-
-
-
     </style>
 
 

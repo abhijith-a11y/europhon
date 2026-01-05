@@ -7,17 +7,12 @@
                     
 
              
-                <img src="<?php echo get_template_directory_uri(); ?>/images/home-slider-01.jpg" alt="Home Slider 01" />
+                <img src="<?php echo get_template_directory_uri(); ?>/images/slide_01.png" alt="Home Slider 01" />
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="slide-content">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/home-slider-01.jpg" alt="Home Slider 01" />
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="slide-content">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/home-slider-01.jpg" alt="Home Slider 01" />
+                <img src="<?php echo get_template_directory_uri(); ?>/images/slide_02.png" alt="Home Slider 01" />
                 </div>
             </div>
         </div>
@@ -32,23 +27,16 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="slide-content">
-                    <h3>Symfony® Glass   </h3>
-                    <h4>sleek modern transparency</h4>
-                    <p>Symfony® acoustic glass partitions systems are designed for transparency without compromise. Symfony® acoustic glass partitions bring clarity, openness, and acoustic control into one seamless system.</p>     
+                    <h3 class="f_28">Euro Systems Private Villa Acoustic Ceilings</h3>
+                    <!-- <h4>sleek modern transparency</h4> -->
+                    <!-- <p>Symfony® acoustic glass partitions systems are designed for transparency without compromise. Symfony® acoustic glass partitions bring clarity, openness, and acoustic control into one seamless system.</p>      -->
                 </div>
             </div>
             <div class="swiper-slide">
             <div class="slide-content">
-                    <h3>Symfony® Glass   </h3>
-                    <h4>sleek modern transparency</h4>
-                    <p>Symfony® acoustic glass partitions systems are designed for transparency without compromise. Symfony® acoustic glass partitions bring clarity, openness, and acoustic control into one seamless system.</p>     
-                </div>
-            </div>
-            <div class="swiper-slide">
-            <div class="slide-content">
-                    <h3>Symfony® Glass   </h3>
-                    <h4>sleek modern transparency</h4>
-                    <p>Symfony® acoustic glass partitions systems are designed for transparency without compromise. Symfony® acoustic glass partitions bring clarity, openness, and acoustic control into one seamless system.</p>     
+                    <h3 class="f_28">Euro Systems Healthcare Sidra Medical Center</h3>
+                    <!-- <h4>sleek modern transparency</h4> -->
+                    <!-- <p>Symfony® acoustic glass partitions systems are designed for transparency without compromise. Symfony® acoustic glass partitions bring clarity, openness, and acoustic control into one seamless system.</p>      -->
                 </div>
             </div>
         </div>
@@ -63,19 +51,12 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="slide-content">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/sym-img-2-small.jpg" alt="Home Slider 01" />
+                <img src="<?php echo get_template_directory_uri(); ?>/images/slide_01_child.png" alt="Home Slider 01" />
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="slide-content">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/sym-img-2-small.jpg" alt="Home Slider 01" />
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="slide-content">
-                    <div class="slide-content-inner">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/sym-img-2-small.jpg" alt="Home Slider 01" />
-                </div>
+                <img src="<?php echo get_template_directory_uri(); ?>/images/slide_02_child.png" alt="Home Slider 01" />
                 </div>
             </div>
         </div>
