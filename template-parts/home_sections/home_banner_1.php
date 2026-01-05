@@ -12,9 +12,6 @@
                 </div>
             </div>
         </div>
-        <div
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%); z-index: 2;">
-        </div>
         <video autoplay loop muted playsinline class="banner_background_video"
             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;">
             <source src="<?php echo get_template_directory_uri(); ?>/images/banner-video.mp4" type="video/mp4">
@@ -22,7 +19,7 @@
     </div>
 
     <div class="banner-main-slider-item"
-        style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/stack_01.png');">
+        style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/home_bg_3.webp');">
         >
         <div class="container">
             <div class="banner_content text_center">
@@ -39,7 +36,7 @@
     </div>
 
     <div class="banner-main-slider-item"
-        style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/stack_02.png');">
+        style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/home_bg_1.webp');">
         >
         <div class="container">
             <div class="banner_content text_center">

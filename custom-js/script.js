@@ -419,9 +419,15 @@ $(document).on('click', function (e) {
 jQuery(document).ready(function ($) {
     var header = $('.site-header');
     var logo = $('#header-logo');
+    
+    // Check if elements exist before proceeding
+    if (header.length === 0) {
+        return;
+    }
+    
     var scrollThreshold = 50; // Adjust this value to control when the class is added
-    var defaultLogo = logo.attr('src');
-    var scrolledLogo = defaultLogo.replace('main_icon.svg', 'scroll_header_logo.png');
+    var defaultLogo = logo.length > 0 ? logo.attr('src') : '';
+    var scrolledLogo = defaultLogo ? defaultLogo.replace('main_icon.svg', 'scroll_header_logo.png') : '';
     var originalWidth = null;
     var originalHeight = null;
     var isScrolled = false; // Track scroll state
@@ -429,40 +435,46 @@ jQuery(document).ready(function ($) {
     
     // Get original dimensions once image is loaded
     function getOriginalDimensions() {
-        if (logo[0].complete) {
+        if (logo.length > 0 && logo[0].complete) {
             originalWidth = logo[0].naturalWidth || logo.width();
             originalHeight = logo[0].naturalHeight || logo.height();
         }
     }
     
     // Try to get dimensions immediately
-    getOriginalDimensions();
-    
-    // Also get dimensions when image loads
-    logo.on('load', function() {
-        originalWidth = this.naturalWidth || $(this).width();
-        originalHeight = this.naturalHeight || $(this).height();
-    });
+    if (logo.length > 0) {
+        getOriginalDimensions();
+        
+        // Also get dimensions when image loads
+        logo.on('load', function() {
+            originalWidth = this.naturalWidth || $(this).width();
+            originalHeight = this.naturalHeight || $(this).height();
+        });
+    }
     
     // Preload both logo images for smooth transitions
-    var preloadScrolledLogo = new Image();
-    preloadScrolledLogo.src = scrolledLogo;
-    var preloadDefaultLogo = new Image();
-    preloadDefaultLogo.src = defaultLogo;
-    
-    // Track if images are loaded
-    var scrolledLogoLoaded = false;
-    var defaultLogoLoaded = false;
-    
-    preloadScrolledLogo.onload = function() {
-        scrolledLogoLoaded = true;
-    };
-    preloadDefaultLogo.onload = function() {
-        defaultLogoLoaded = true;
-    };
+    if (scrolledLogo) {
+        var preloadScrolledLogo = new Image();
+        preloadScrolledLogo.src = scrolledLogo;
+        var preloadDefaultLogo = new Image();
+        preloadDefaultLogo.src = defaultLogo;
+        
+        // Track if images are loaded
+        var scrolledLogoLoaded = false;
+        var defaultLogoLoaded = false;
+        
+        preloadScrolledLogo.onload = function() {
+            scrolledLogoLoaded = true;
+        };
+        preloadDefaultLogo.onload = function() {
+            defaultLogoLoaded = true;
+        };
+    }
     
     // Function to handle smooth logo transition using requestAnimationFrame
     function transitionLogo(newSrc, newWidth, newHeight) {
+        if (logo.length === 0 || !newSrc) return;
+        
         // Use requestAnimationFrame for smooth animation
         requestAnimationFrame(function() {
             // Step 1: Fade out current image smoothly
@@ -471,8 +483,8 @@ jQuery(document).ready(function ($) {
             // Step 2: Wait for fade out, then prepare new image
             setTimeout(function() {
                 // Check if image is already preloaded
-                var isPreloaded = (newSrc === scrolledLogo && scrolledLogoLoaded && preloadScrolledLogo.complete) ||
-                                 (newSrc === defaultLogo && defaultLogoLoaded && preloadDefaultLogo.complete);
+                var isPreloaded = (newSrc === scrolledLogo && typeof scrolledLogoLoaded !== 'undefined' && scrolledLogoLoaded && preloadScrolledLogo.complete) ||
+                                 (newSrc === defaultLogo && typeof defaultLogoLoaded !== 'undefined' && defaultLogoLoaded && preloadDefaultLogo.complete);
                 
                 function applyNewImage() {
                     // Change the src while still invisible
@@ -548,37 +560,41 @@ jQuery(document).ready(function ($) {
     
     // Optimized scroll handler with requestAnimationFrame throttling
     function updateHeader() {
-        var scrollTop = $(window).scrollTop();
-        
-        if (scrollTop > scrollThreshold && !isScrolled) {
-            // Just scrolled down - transition to scrolled logo
-            isScrolled = true;
-            // Use requestAnimationFrame for smooth class addition
-            requestAnimationFrame(function() {
+        try {
+            var scrollTop = $(window).scrollTop() || window.pageYOffset || document.documentElement.scrollTop || 0;
+            
+            if (scrollTop > scrollThreshold && !isScrolled) {
+                // Just scrolled down - transition to scrolled logo
+                isScrolled = true;
+                // Add class synchronously (not in requestAnimationFrame) for immediate application
                 header.addClass('scrolled');
-            });
-            
-            // Get dimensions before switching if not already stored
-            if (!originalWidth || !originalHeight) {
-                getOriginalDimensions();
-            }
-            
-            // Use the same smooth transition function
-            transitionLogo(scrolledLogo, '58px', '50px');
-            
-        } else if (scrollTop <= scrollThreshold && isScrolled) {
-            // Just scrolled up - transition back to default logo
-            isScrolled = false;
-            // Use requestAnimationFrame for smooth class removal
-            requestAnimationFrame(function() {
+                
+                // Get dimensions before switching if not already stored
+                if (logo.length > 0 && (!originalWidth || !originalHeight)) {
+                    getOriginalDimensions();
+                }
+                
+                // Use the same smooth transition function
+                if (scrolledLogo) {
+                    transitionLogo(scrolledLogo, '58px', '50px');
+                }
+                
+            } else if (scrollTop <= scrollThreshold && isScrolled) {
+                // Just scrolled up - transition back to default logo
+                isScrolled = false;
+                // Remove class synchronously (not in requestAnimationFrame) for immediate application
                 header.removeClass('scrolled');
-            });
-            
-            // Use the same smooth transition function
-            transitionLogo(defaultLogo, null, null);
+                
+                // Use the same smooth transition function
+                if (defaultLogo) {
+                    transitionLogo(defaultLogo, null, null);
+                }
+            }
+        } catch (e) {
+            console.error('Error in updateHeader:', e);
+        } finally {
+            ticking = false;
         }
-        
-        ticking = false;
     }
     
     $(window).on('scroll', function() {
@@ -588,8 +604,15 @@ jQuery(document).ready(function ($) {
         }
     });
     
-    // Initial check on page load
-    updateHeader();
+    // Initial check on page load - use setTimeout to ensure DOM is fully ready
+    setTimeout(function() {
+        updateHeader();
+    }, 100);
+    
+    // Also check after window load to catch any late-loading scenarios
+    $(window).on('load', function() {
+        updateHeader();
+    });
 });
 
 // ==================== Products Slides Zoom-in Animation ====================

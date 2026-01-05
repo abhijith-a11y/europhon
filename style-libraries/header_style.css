@@ -2,7 +2,7 @@
 .site-header {
   position: absolute;
   top: 0px;
-  z-index: 10;
+  z-index: 2;
   width: 100%;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.4s ease, backdrop-filter 0.4s ease, -webkit-backdrop-filter 0.4s ease;
   will-change: transform, background, backdrop-filter;
@@ -27,7 +27,8 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.4s ease, backdrop-filter 0.4s ease, -webkit-backdrop-filter 0.4s ease;
-  transform: translateZ(0); /* Force hardware acceleration */
+  transform: translateZ(0);
+  /* Force hardware acceleration */
   -webkit-transform: translateZ(0);
 }
 
@@ -42,7 +43,7 @@
 
 .site-header.scrolled .header_row {
   padding: 10px 0px;
-  border-bottom:0px;
+  border-bottom: 0px;
   transition: padding 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-bottom 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -91,15 +92,15 @@
   transition: 0.4s;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: transparent;
 }
 
-input:focus + .slider {
+input:focus+.slider {
   box-shadow: 0 0 1px transparent;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   -webkit-transform: translateX(16px);
   -ms-transform: translateX(16px);
   transform: translateX(16px);
@@ -349,6 +350,7 @@ nav ul {
 .back_to_main .side_arrow {
   opacity: 1;
 }
+
 .logo_header {
   display: block;
   text-align: center;
@@ -364,7 +366,8 @@ nav ul {
   display: block;
   transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), width 0.4s cubic-bezier(0.4, 0, 0.2, 1), height 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: opacity, width, height, transform;
-  transform: translateZ(0); /* Force hardware acceleration */
+  transform: translateZ(0);
+  /* Force hardware acceleration */
   -webkit-transform: translateZ(0);
 }
 
@@ -456,6 +459,7 @@ nav ul {
 /* responsive */
 
 @media only screen and (min-width: 1680px) {
+
   .navbar-toggler,
   .btn-close {
     font-size: 13px;
@@ -497,7 +501,10 @@ nav ul {
 }
 
 
-.submenu_mobile{ display: none;}
+.submenu_mobile {
+  display: none;
+}
+
 @media only screen and (max-width: 575px) {
   .header_col {
     width: 33%;
@@ -535,8 +542,16 @@ nav ul {
     padding: 35px 35px 10px 35px;
   }
 
-  .submenu_desk{ display: none;}
-  .submenu_mobile{ display: block;}
-  .banner_bread_crumb{     margin-top: 51px;}
+  .submenu_desk {
+    display: none;
+  }
+
+  .submenu_mobile {
+    display: block;
+  }
+
+  .banner_bread_crumb {
+    margin-top: 51px;
+  }
 
 }
