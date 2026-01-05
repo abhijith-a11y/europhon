@@ -1,0 +1,371 @@
+/* ============== Career page style ============== */
+
+.service_about p {
+    max-width: 975px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* difference sec */
+.service_difference {
+    position: relative;
+}
+
+.service_difference .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+
+/* key_feature */
+.core_value_grid {
+    display: grid;
+    padding: 0px 30px;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 60px;
+    column-gap: 20px;
+}
+
+
+.key_feature_img {
+    overflow: hidden;
+    margin-bottom: 42px;
+    height: 434px;
+    position: relative;
+}
+
+.key_feature_img img {
+    transition: all 0.4s linear;
+    height: 100%;
+    object-fit: cover;
+}
+
+.key_feature_box:hover .key_feature_img img {
+    transform: scale(1.13);
+}
+
+.key_feature_title {
+    font-size: 16px;
+    letter-spacing: 1.3px;
+}
+
+.key_feature {
+    background: #F5F5F5;
+}
+
+.key_feature.key_feature_dark {
+    background: #000;
+}
+
+.key_feature.key_feature_dark .key_feature_title,
+.key_feature.key_feature_dark h2,
+.key_feature.key_feature_dark p {
+    color: #fff;
+}
+
+.key_feature_box h4 {
+    font-size: 18px;
+    margin-bottom: 22px;
+    color: #fff;
+    font-family: "RivieraNights-Regular";
+}
+
+/* accordion style starts */
+
+.accordion_main_sec {
+    background: #F5F5F5;
+}
+
+.accordion_row {
+    margin-bottom: 60px;
+}
+
+.accordion-header {
+    margin: 0;
+}
+
+.accordion-button {
+    background-color: transparent;
+    border: none;
+    padding: 29px 0px;
+    cursor: pointer;
+    outline: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+.accordion-item {
+    margin-top: -1px;
+}
+
+.accordion .accordion-item .accordion-header {
+    border-bottom: 1px solid #CFCFCF;
+    border-top: 1px solid #CFCFCF;
+}
+
+.accordion .accordion-item:first-child .accordion-header {
+    border-top: none;
+}
+
+.accordion .accordion-item:last-child .accordion-header {
+    border-bottom: none;
+}
+
+.accordion .accordion-item:last-child .accordion-body,
+.accordion .accordion-item:last-child .content_accordion {
+    padding-bottom: 0px;
+}
+
+.accordion-button h4 {
+    font-size: 24px;
+    font-family: "RivieraNights-Light";
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-right: 100px;
+}
+
+.accordion-icon {
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: transform 0.1s;
+}
+
+.accordion-collapse {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.7s ease;
+}
+
+.accordion-body {
+    padding: 20px 0px;
+}
+
+/* accordion inner */
+.content_accordion {
+    padding: 20px 0px;
+    max-width: 1000px;
+    margin-left: auto;
+}
+
+.content_accordion ul {
+    margin: 0px;
+}
+
+.content_accordion ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #353A3F;
+}
+
+.accordion_row_l {
+    width: 35%;
+    padding-right: 20px;
+}
+
+.accordion_row_r {
+    width: 65%;
+}
+
+.content_accordion h4 {
+    font-size: 17px;
+    font-family: "RivieraNights-Bold";
+    text-transform: unset;
+}
+
+.content_accordion li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.content_accordion li,
+.content_accordion li span {
+    font-size: 16px;
+    color: #353A3F;
+    font-family: "RivieraNights-Regular";
+}
+
+.content-section {
+    margin-bottom: 60px;
+}
+
+.content_accordion .content-section:last-child {
+    margin-bottom: 0px;
+}
+
+.content_accordion li.bold_listing {
+    font-family: "RivieraNights-Medium" !important;
+}
+
+.content_accordion li.bold_listing span {
+    font-family: "RivieraNights-Regular" !important;
+}
+
+.accordion-icon img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.1s;
+}
+
+
+/* accordion style ends */
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 1680px) {
+
+    .service_about p {
+        max-width: 1100px;
+    }
+
+    .key_feature_img {
+        height: 534px;
+    }
+
+    .key_feature_title {
+        font-size: 17px;
+    }
+
+    .key_feature_box h4 {
+        font-size: 22px;
+    }
+
+    /* accordion */
+
+    .accordion-icon img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .content_accordion {
+        max-width: 1218px;
+    }
+
+    .accordion-button h4 {
+        margin-right: 130px;
+    }
+}
+
+@media only screen and (max-width: 1365px) {
+
+    .service_about p {
+        max-width: 875px;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 1199px) {
+    .core_value_grid {
+        row-gap: 40px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .core_value_grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .key_feature_img {
+        margin-bottom: 25px;
+    }
+
+    .accordion-button h4 {
+        font-size: 20px;
+        margin-right: 60px;
+    }
+
+    .accordion_row {
+        margin-bottom: 40px;
+    }
+
+    .key_feature_img {
+        height: 334px;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    .core_value_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .content_accordion h4 {
+        font-size: 14px;
+    }
+
+}
+
+@media only screen and (max-width: 575px) {
+    .service_difference {
+        height: 270px;
+    }
+
+    .service_difference img {
+        height: 100%;
+    }
+
+    .key_feature_grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .core_value_grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .accordion_row {
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+
+    .accordion_row_l {
+        width: 100%;
+        padding-right: 0px;
+    }
+
+    .accordion_row_r {
+        width: 100%;
+    }
+
+    .content_accordion ul {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .accordion-button h4 {
+        font-size: 16px;
+        margin-right: 60px;
+        text-align: left;
+    }
+
+    .accordion-button {
+        padding: 20px 0px;
+    }
+
+    .accordion-icon img {
+        width: 20px;
+        height: 20px;
+    }
+
+
+}

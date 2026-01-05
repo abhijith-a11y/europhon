@@ -1,0 +1,168 @@
+/* ============== Sustainability Popup Styles ============== */
+
+.sustainability-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sustainability-popup.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+
+.sustainability-popup-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.sustainability-popup-content {
+    position: relative;
+    background: #ffffff;
+    width: 90%;
+    max-width: 800px;
+    padding: 80px 60px 60px;
+    text-align: center;
+    z-index: 100000;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.sustainability-popup-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: transparent;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+    z-index: 100001;
+    font-size: 32px;
+    line-height: 1;
+    font-family: Arial, sans-serif;
+}
+
+.sustainability-popup-close:hover {
+    opacity: 0.6;
+}
+
+.sustainability-popup-close span {
+    display: block;
+    font-weight: 300;
+}
+
+.sustainability-popup-title {
+    font-size: 48px;
+    font-weight: 400;
+    font-family: "RivieraNights-Regular", Arial, sans-serif;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0 0 40px 0;
+    line-height: 1.2;
+}
+
+.sustainability-popup-text {
+    font-size: 18px;
+    font-weight: 300;
+    font-family: "RivieraNights-Light", Arial, sans-serif;
+    color: #000;
+    line-height: 1.6;
+    margin: 0 0 50px 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sustainability-popup-link {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "RivieraNights-Regular", Arial, sans-serif;
+    color: #000;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.sustainability-popup-link:hover {
+    opacity: 0.7;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 991px) {
+    .sustainability-popup-content {
+        padding: 60px 40px 50px;
+        max-width: 90%;
+    }
+
+    .sustainability-popup-title {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+
+    .sustainability-popup-text {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    .sustainability-popup-close {
+        top: 20px;
+        right: 20px;
+        width: 35px;
+        height: 35px;
+        font-size: 28px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .sustainability-popup-content {
+        padding: 50px 30px 40px;
+    }
+
+    .sustainability-popup-title {
+        font-size: 28px;
+        letter-spacing: 1px;
+        margin-bottom: 25px;
+    }
+
+    .sustainability-popup-text {
+        font-size: 14px;
+        margin-bottom: 35px;
+        line-height: 1.5;
+    }
+
+    .sustainability-popup-link {
+        font-size: 14px;
+    }
+
+    .sustainability-popup-close {
+        top: 15px;
+        right: 15px;
+        width: 30px;
+        height: 30px;
+        font-size: 24px;
+    }
+}
+

@@ -1,0 +1,319 @@
+/* ==================== About page css ==================== */
+
+
+.about_beginning {
+    padding: 120px 0px;
+}
+
+.about_beginning p {
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.original_story_row {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 40px;
+}
+
+.original_story_col {
+    width: 50%;
+    padding: 0px 0px;
+}
+
+.original_col_r {
+    margin: 0 auto;
+    max-width: 545px;
+}
+
+.original_col_r p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.original_col_r p:last-child {
+    margin-bottom: 0px;
+}
+
+.original_story {
+    padding: 250px 0px;
+    position: relative;
+}
+
+.original_story .banner_background_video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.original_story .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* .original_story {
+    background-image: url(../images/home_bg_1.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+.original_story_row {
+    align-items: center;
+}
+
+/* core value */
+
+.core_value {
+    background: #F5F5F5;
+}
+
+.core_value_grid {
+    display: grid;
+    padding: 0px 30px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.value_title {
+    font-size: 20px;
+    font-family: "RivieraNights-Regular";
+    margin-bottom: 15px;
+	 letter-spacing: 1.5px;
+}
+
+.core_grid_box p {
+    font-size: 18px;
+}
+
+.core_grid_img {
+    overflow: hidden;
+    margin-bottom: 40px;
+    height: 425px;
+}
+
+.core_grid_img img,
+.belief_grid_img img {
+    transition: all 0.4s linear;
+    height: 100%;
+    object-fit: cover;
+}
+
+.core_grid_box,
+.belief_box {
+    display: block;
+    transition: all 0.4s linear;
+}
+
+.core_grid_box:hover .core_grid_img img {
+    transform: scale(1.15);
+}
+
+.belief_sec {
+    background: var(--black);
+}
+
+.belief_grid {
+    display: grid;
+    padding: 0px 30px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.belief_grid_img {
+    overflow: hidden;
+    margin-bottom: 40px;
+    height: 334px;
+}
+
+.belief_box:hover .belief_grid_img img {
+    transform: scale(1.15);
+}
+
+
+
+
+
+
+
+
+/* ============ responsive ============ */
+
+@media only screen and (min-width: 1680px) {
+
+    .about_beginning p {
+        max-width: 820px;
+    }
+
+    .original_col_r {
+        margin: 0 auto;
+        max-width: 490px;
+    }
+
+    .original_col_r p {
+        margin-bottom: 25px;
+        font-size: 18px;
+    }
+
+    .about_beginning {
+        padding: 150px 0px;
+    }
+
+    .core_value_grid {
+        padding: 0px 50px;
+    }
+
+    .value_title {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .core_grid_img {
+        margin-bottom: 50px;
+        height: 534px;
+    }
+
+    .belief_grid_img {
+        margin-bottom: 50px;
+        height: 434px;
+    }
+
+
+    .original_story {
+        padding: 330px 0px;
+    }
+}
+
+
+@media only screen and (max-width: 1365px) {
+
+    .original_story {
+        padding: 200px 0px;
+    }
+
+    .core_grid_img {
+        height: 365px;
+    }
+
+    .belief_grid_img {
+        height: 284px;
+    }
+
+}
+
+@media only screen and (max-width: 1199px) {
+
+    .original_story {
+        padding: 170px 0px;
+    }
+
+    .belief_grid_img {
+        height: 264px;
+        margin-bottom: 25px;
+
+    }
+
+    .core_grid_img {
+        margin-bottom: 25px;
+        height: 295px;
+    }
+
+    .core_grid_box p {
+        font-size: 16px;
+    }
+
+    .value_title {
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+
+}
+
+
+@media only screen and (max-width: 991px) {
+
+    .about_beginning {
+        padding: 90px 0px;
+    }
+    .who_we_are {
+        padding: 100px 0px;
+    }
+    .original_story {
+        padding: 100px 0px;
+    }
+
+    .belief_grid_img {
+        height: 214px;
+    }
+
+    .core_value_grid {
+        padding: 0px 0px;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        row-gap: 30px;
+    }
+
+    .core_grid_img {
+        height: 365px;
+    }
+
+    .belief_grid {
+        padding: 0px 0px;
+    }
+}
+
+
+
+@media only screen and (max-width: 767px) {
+    .original_story_col {
+        width: 100%;
+    }
+
+    .original_story_row {
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 30px;
+    }
+
+}
+
+@media only screen and (max-width: 575px) {
+    .small_banner .banner_content {
+        margin-top: 20px;
+        padding: 0px 20px;
+    }
+
+    .small_banner .banner_content .f_56 {
+        font-size: 26px;
+    }
+
+    .sub_page_banner.small_banner .container {
+        padding-top: 36px;
+    }
+
+    .belief_grid,
+    .core_value_grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+
+    .core_grid_img,
+    .belief_grid_img {
+        margin-bottom: 19px;
+    }
+.who_we_are {
+        padding: 60px 0px;
+    }
+    .about_beginning {
+        padding: 60px 0px;
+    }
+
+    .original_story {
+        padding: 60px 0px;
+    }
+}

@@ -1,0 +1,60 @@
+/* Services page styles */
+
+.service_about p{
+    max-width: 875px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.how_we_work .value_title{
+font-size: 17px;
+margin-bottom: 16px;
+}
+.how_we_work .core_grid_img {
+    overflow: hidden;
+    margin-bottom: 36px;
+    height: 425px;
+}
+
+.service_difference {
+    position: relative;
+}
+.service_difference .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.syphony_about {
+        max-width: 1154px;
+     margin-left: auto;
+    margin-right: auto;
+}
+
+/* dots slider */
+
+.double_dots_slider.service_dot_slider .right-slide-content h2{
+    font-size: 26px;
+}
+
+
+
+
+
+/* ============ responsive ============ */
+
+@media only screen and (min-width: 1680px) {
+   .double_dots_slider.service_dot_slider .right-slide-content h2{
+    font-size: 28px;
+}
+	@media only screen and (max-width: 575px) {
+  .service_difference {
+    height: 270px;
+}
+	}
+
+
+}

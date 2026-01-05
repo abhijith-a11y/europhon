@@ -1,0 +1,503 @@
+/* news page */
+
+.news_listing_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 80px;
+    column-gap: 25px;
+}
+
+/* First grid item spans 2 columns */
+.news_listing_grid .news_grid_box:first-child {
+    grid-column: span 2;
+}
+
+.news_title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.news_grid_box {
+    display: block;
+    transition: all 0.4s linear;
+}
+
+.news_gird_img {
+    overflow: hidden;
+    margin-bottom: 40px;
+    height: 334px;
+}
+
+.news_gird_img img {
+    transition: all 0.4s linear;
+    height: 100%;
+    object-fit: cover;
+}
+
+.news_grid_box:hover .news_gird_img img {
+    transform: scale(1.13);
+}
+
+.news_title {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-family: "RivieraNights-Light";
+}
+
+.news_date,
+.news_grid_box p,
+.news_title {
+    margin-top: 15px;
+}
+
+.news_date {
+    font-size: 17px;
+    font-family: "RivieraNights-Light";
+    letter-spacing: 1.5px;
+}
+
+.news_grid_box p {
+    font-size: 16px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+
+/* news filter */
+.filter_search {
+    margin-bottom: 80px;
+}
+
+
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 38px;
+}
+
+.search-field {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #7D7D7D;
+    padding-bottom: 0px;
+}
+
+.search-field .icon_search {
+    cursor: pointer;
+    background: none;
+    width: 30px;
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+}
+
+.search-field .icon_search img {
+    margin-right: 10px;
+    width: 20px;
+}
+
+.icon_search,
+.icon_search:focus,
+.icon_search:active:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.search-field input {
+    border: none;
+    outline: none;
+    width: 100%;
+    text-transform: uppercase;
+    color: #000;
+}
+
+
+.category-field {
+    width: 37%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.select_cate {
+    position: relative;
+    width: 100%;
+	border-bottom: 1px solid #7D7D7D;
+}
+
+/* Native select reset */
+.select_cate select,
+.search-field input,
+.search-field input::placeholder {
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    font-family: "RivieraNights-Regular";
+}
+
+.search-field input::placeholder {
+    text-transform: uppercase;
+    color: #000;
+}
+
+.select_cate select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 0px solid transparent;
+    padding: 25px 30px 25px 0;
+    margin: 0px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+
+.select_cate select option {
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    font-family: "RivieraNights-Regular";
+    margin-bottom: 10px;
+}
+
+.select_cate select:focus,
+.select_cate select:active:focus {
+    box-shadow: none;
+    outline: none;
+    border: none;
+}
+
+/* SVG arrow */
+.select_cate .select-arrow {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    pointer-events: none;
+}
+
+.select-arrow img {
+    width: 18px;
+}
+
+/* Remove default arrow (IE) */
+.select_cate select::-ms-expand {
+    display: none;
+}
+
+.search-field .icon_search {
+    padding: 25px 0px;
+}
+
+.search-field input {
+    padding: 25px 30px;
+    position: relative;
+}
+
+
+/* =============== news detail page style =============== */
+
+.related_news {
+    background: var(--black);
+}
+
+.related_news .news_listing_grid .news_grid_box:first-child {
+    grid-column: span 1;
+}
+
+.news_detail_content {
+    background-color: #F5F5F5;
+}
+
+.container.news_d_container {
+    max-width: 80%;
+}
+
+.news_d_inner p {
+    margin: 30px 0px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.news_d_center_img img {
+    width: 100%;
+}
+
+.news_d_slider_box img {
+    /* height: 700px;
+    object-fit: cover; */
+    width: 100%;
+}
+
+/* slider dots */
+
+.news_d_slider .slick-dots li button {
+    border: 1px solid transparent;
+    border-radius: 50px;
+    padding: 0px;
+    transition: all 0.2s linear;
+    position: relative;
+}
+
+.news_d_slider .slick-dots li button:before {
+    background: #000;
+    opacity: 1;
+    width: 6px;
+    height: 6px;
+    border-radius: 50px;
+    content: '';
+    transition: all 0.2s linear;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.news_d_slider .slick-dots li.slick-active button {
+    border: 1px solid #000;
+}
+
+.news_d_slider .slick-dots li.slick-active button:before {
+    width: 4px;
+    height: 4px;
+}
+
+.news_d_slider {
+    padding-bottom: 40px;
+    margin-bottom: 60px !important;
+}
+
+.news_dates_flex {
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 40px 0px;
+    border-top: 1px solid #CFCFCF;
+    margin-top: 40px;
+    justify-content: space-between;
+}
+
+.news_date_l p {
+    display: inline-block;
+}
+
+.news_date_l p,
+.news_date_l span {
+    font-family: "RivieraNights-Light";
+    font-size: 16px;
+    /* letter-spacing: 150%; */
+}
+
+.news_date_l span {
+    display: inline-block;
+    margin: 0px 12px;
+}
+
+.news_social a {
+    padding: 9px;
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    border-radius: 50px;
+    background: transparent;
+    border: 1px solid #000;
+    transition: all 0.2s linear;
+    margin-left: 7px;
+}
+
+.news_social a svg {
+    height: 100%;
+    width: auto;
+    fill: #000;
+    transition: all 0.2s linear;
+}
+
+.news_social a:hover {
+    background: #000;
+}
+
+.news_social a:hover svg {
+    fill: #fff;
+}
+
+.news_detail_header h1 {
+    text-transform: capitalize;
+    font-family: "RivieraNights-Regular";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============ responsive ============ */
+
+
+@media only screen and (min-width: 1680px) {
+    .news_title {
+        font-size: 22px;
+    }
+
+    .news_grid_box p {
+        font-size: 17px;
+    }
+
+    .news_date {
+        font-size: 18px;
+    }
+
+    .news_gird_img {
+        height: 434px;
+    }
+
+    .select_cate select,
+    .search-field input,
+    .search-field input::placeholder {
+        font-size: 18px;
+    }
+
+    .news_d_inner p {
+        font-size: 17px;
+    }
+
+    .container.news_d_container {
+        max-width: 1238px;
+    }
+
+    .news_date_l p,
+    .news_date_l span {
+        font-size: 18px;
+    }
+
+    .news_date_l span {
+        margin: 0px 15px;
+    }
+}
+
+
+@media only screen and (max-width: 1199px) {
+    .news_title {
+        font-size: 18px;
+    }
+
+    .news_gird_img {
+        height: 264px;
+    }
+}
+
+
+@media only screen and (max-width: 991px) {
+
+    .news_title {
+        font-size: 16px;
+    }
+
+    .news_date {
+        font-size: 15px;
+    }
+
+    .news_gird_img {
+        height: 220px;
+    }
+
+    .news_listing_grid {
+        row-gap: 60px;
+        column-gap: 16px;
+    }
+
+    .filter_search {
+        margin-bottom: 60px;
+    }
+
+    .search-field input {
+        padding: 17px 30px;
+    }
+
+    .select_cate select {
+        padding: 17px 30px 17px 0px;
+    }
+
+    .search-field .icon_search {
+        padding: 17px 0px;
+    }
+
+    .news_gird_img {
+        margin-bottom: 25px;
+    }
+
+    .select_cate .select-arrow {
+        top: 17px;
+    }
+
+    .container.news_d_container {
+        max-width: 96%;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .news_listing_grid .news_grid_box:first-child {
+        grid-column: span 1;
+    }
+
+    .news_listing_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .news_gird_img {
+        margin-bottom: 25px;
+    }
+
+}
+
+@media only screen and (max-width: 575px) {
+    .news_listing_grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .news_date,
+    .news_grid_box p,
+    .news_title {
+        margin-top: 10px;
+    }
+
+    .search-bar {
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .category-field {
+        width: 100%;
+    }
+
+    .search-bar {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .news_dates_flex {
+        row-gap: 20px;
+    }
+
+    .news_social a {
+        margin-left: 0px;
+        margin-right: 7px;
+    }
+
+    .news_dates_flex {
+        padding: 35px 0px;
+        margin-top: 35px;
+    }
+}

@@ -1,0 +1,320 @@
+      .left-slider .slick-list::after {
+               content: '';
+               width: 20px;
+               height: 100%;
+               background: #fff;
+               position: absolute;
+               right: 0px;
+               top: 0px;
+           }
+
+           .slider-wrapper {
+               display: flex;
+               gap: 60px;
+           }
+
+           .double_dots_slider {
+               overflow: hidden;
+               padding-bottom: 130px;
+           }
+
+           .double_dots_slider .container_fluid {
+               padding-right: 50px;
+               max-width: 1920px;
+               margin: 0 auto;
+               position: relative;
+           }
+
+           .left-slider {
+               width: 55%;
+               position: relative;
+               overflow: visible;
+           }
+
+           .left-slider .slick-slide {
+               margin-right: 10px;
+           }
+
+           .left-slider img {
+               width: 100%;
+               height: 500px;
+               object-fit: cover;
+               border-radius: 0;
+           }
+
+           .right-slider {
+               width: 45%;
+           }
+
+           .arrow_box {
+               width: 45%;
+               padding: 0px 40px 0px 35px;
+               z-index: 1;
+               position: absolute;
+               right: 0px;
+               bottom: 100px;
+           }
+
+           .double_dots_slider .right-slide-content {
+               min-height: 100%;
+               display: flex!important;
+               align-items: center;
+           }
+
+           .double_dots_slider .right-slide-content h2 {
+               letter-spacing: 2.4px;
+               text-transform: uppercase;
+               margin: 0px;
+               font-family: "RivieraNights-Regular";
+           }
+
+           .double_dots_slider .slide-thumbnail {
+               width: 180px;
+               height: 350px;
+               object-fit: cover;
+               position: absolute;
+               right: 0px;
+               bottom: 0px;
+           }
+
+           /* new style dots */
+           .double_dots_slider .slick-dots {
+               bottom: 0px;
+               position: static;
+               /* important */
+           }
+
+           .double_dots_slider .slick-dots li button {
+               border: 1px solid transparent;
+               border-radius: 50px;
+               padding: 0px;
+               transition: all 0.2s linear;
+               position: relative;
+           }
+
+           .double_dots_slider .slick-dots li button:before {
+               background: #000;
+               opacity: 1;
+               width: 6px;
+               height: 6px;
+               border-radius: 50px;
+               content: '';
+               transition: all 0.2s linear;
+               left: 50%;
+               top: 50%;
+               transform: translate(-50%, -50%);
+           }
+
+           .double_dots_slider .slick-dots li.slick-active button {
+               border: 1px solid #000;
+           }
+
+           .double_dots_slider .slick-dots li.slick-active button:before {
+               width: 4px;
+               height: 4px;
+           }
+
+           .simphony_content {
+               max-width: 400px;
+           }
+
+           .double_dots_slider .dots-wrap {
+               position: absolute;
+               bottom: -60px;
+               text-align: center;
+               z-index: 1;
+               width: 90%;
+               left: 50%;
+               transform: translateX(-50%);
+           }
+
+           .double_dots_slider .right-slider .slick-list,
+           .double_dots_slider .right-slider .slick-track {
+               height: 100%;
+           }
+
+           .double_dots_slider .simphony_content a {
+               position: absolute;
+               bottom: 0px;
+           }
+
+           .simphony_content p {
+               font-size: 16px;
+           }
+
+           .symphony_tagline {
+               margin: 10px 0px 32px 0px;
+               text-transform: uppercase;
+               letter-spacing: 1.5px;
+               font-size: 20px;
+           }
+
+
+
+           /* responsive */
+
+           @media only screen and (min-width: 1680px) {
+               .right-slide-content {
+                   min-height: 986px;
+               }
+
+               .left-slider img {
+                   height: 886px;
+               }
+
+               .double_dots_slider .slide-thumbnail {
+                   width: 298px;
+                   height: 550px;
+               }
+
+               .simphony_content p {
+                   font-size: 18px;
+               }
+
+               .simphony_content {
+                   max-width: 420px;
+               }
+
+               .symphony_tagline {
+                   font-size: 24px;
+                   font-family: "RivieraNights-Light";
+               }
+
+           }
+
+           @media only screen and (min-width: 1920px) {
+               .simphony_content {
+                   max-width: 490px;
+               }
+           }
+
+           @media only screen and (max-width: 1365px) {
+
+               .left-slider .slick-list::after {
+                   display: none;
+               }
+
+               .left-slider .slick-slide {
+                   margin-right: 15px;
+               }
+
+               .simphony_content {
+                   max-width: 330px;
+               }
+
+               .symphony_tagline {
+                   font-size: 18px;
+               }
+           }
+
+           @media only screen and (max-width: 1199px) {
+               .slider-wrapper {
+                   gap: 30px;
+               }
+
+               .custom-arrows button {
+                   width: 70px;
+                   height: 70px;
+                   padding: 18px;
+               }
+
+               .arrow_box {
+                   padding: 0px 40px 0px 5px;
+               }
+
+               .double_dots_slider .slide-thumbnail {
+                   width: 170px;
+                   height: 230px;
+               }
+
+               .double_dots_slider .container_fluid {
+                   padding-right: 0px;
+               }
+
+               .double_dots_slider .right-slide-content {
+                   align-items: start;
+               }
+
+               .simphony_content {
+                   max-width: 330px;
+                   margin-top: 30px;
+               }
+
+               .left-slider img {
+                width:98%;
+               }
+           }
+
+           @media only screen and (max-width: 991px) {
+               .simphony_content {
+                   max-width: 100%;
+                   margin-top: 30px;
+                   padding-right: 15px;
+               }
+
+               .slider-wrapper {
+                   gap: 0px;
+               }
+           }
+
+           @media only screen and (max-width: 767px) {
+               .left-slider img {
+                   height: 370px;
+               }
+
+               .double_dots_slider .slide-thumbnail {
+                   width: 190px;
+                   height: 270px;
+                   margin-top: 40px;
+                   position: relative;
+               }
+
+               .double_dots_slider .left-slider {
+                   width: 94%;
+                   margin: 0 auto;
+               }
+
+               .double_dots_slider .right-slide-content {
+                   min-height: auto;
+                   display: block!important;
+               }
+
+               .double_dots_slider .right-slider {
+                   width: 100%;
+                   padding: 0px 20px;
+               }
+
+               .double_dots_slider .slider-wrapper {
+                   gap: 30px;
+                   flex-direction: column;
+               }
+
+               .double_dots_slider .left-slider img {
+                   height: 320px;
+               }
+
+               .double_dots_slider .container_fluid {
+                   padding-right: 0px;
+               }
+
+               .double_dots_slider .simphony_content a {
+                   position: relative;
+                   bottom: 0px;
+               }
+
+               .symphony_tagline {
+                margin-bottom: 20px;
+               }
+
+           }
+
+           @media only screen and (max-width: 575px) {
+               .double_dots_slider .left-slider .slick-slide {
+                   margin-right: 0px;
+               }
+
+               .double_dots_slider .slide-thumbnail {
+
+                   display: none;
+               }
+           }

@@ -1,0 +1,226 @@
+/* Download page styles */
+
+.download_concept {
+    background-color: #F5F5F5;
+    padding: 150px 0px 50px 0px;
+}
+
+.download_glass {
+    padding: 150px 0p;
+    background-color: #fff;
+}
+
+.download_concept h2,
+.download_glass h2 {
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    font-family: "RivieraNights-Regular";
+    text-transform: capitalize;
+    border-bottom: 1px solid #CFCFCF;
+}
+
+.grid_conecpt {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
+    margin-bottom: 100px;
+}
+
+.grid_conecpt.mb_0 {
+    margin-bottom: 0px;
+}
+
+.concept_box h6 {
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-family: "RivieraNights-Regular";
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.concept_box ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.concept_box li {
+    margin-bottom: 4px;
+}
+
+.concept_box a {
+    color: #000;
+    text-decoration: underline;
+    font-size: 16px;
+    font-family: "RivieraNights-Light";
+    line-height: 1.5;
+    transition: all 0.2s linear;
+}
+
+.concept_box a:hover {
+    opacity: 0.7;
+}
+
+.materials-links {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.materials-links a {
+    color: #000;
+    text-decoration: underline;
+    font-size: 16px;
+    line-height: 1.5;
+    transition: all 0.2s linear;
+}
+
+.materials-links a:hover {
+    opacity: 0.7;
+}
+
+.pill_row {
+    column-gap: 18px;
+    margin-bottom: 8px;
+    align-items: center;
+}
+
+.pill_row p {
+    width: 290px;
+    font-size: 20px;
+    margin-right: 100px;
+}
+
+.download_pill {
+    border: none;
+    font-size: 16px;
+    box-shadow: none;
+    outline: none;
+    border-radius: 100px;
+    height: 47px;
+    min-width: 147px;
+    padding: 0px 5px;
+    background: #F5F5F5;
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
+
+.download_pill:hover {
+    background: #000;
+    color: #fff;
+}
+
+.concept_row {
+    margin-bottom: 100px;
+}
+
+.download_concept .container .concept_row:last-child,
+.download_glass .container .concept_row:last-child {
+    margin-bottom: 0px;
+}
+
+
+
+
+
+
+
+/* responsive */
+
+@media only screen and (min-width: 1680px) {
+    .materials-links a {
+        font-size: 17px;
+    }
+
+    .concept_box h6,
+    .pill_row p {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .download_concept {
+        padding: 80px 0px 50px 0px;
+    }
+
+    .pill_row p {
+        width: 240px;
+        font-size: 16px;
+        margin-right: 80px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .download_pill {
+        font-size: 14px;
+        height: 47px;
+        min-width: 127px;
+    }
+
+    .download_concept h2,
+    .download_glass h2 {
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .grid_conecpt {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        margin-bottom: 60px;
+    }
+
+    .download_concept {
+        padding: 60px 0px 50px 0px;
+    }
+
+    .pill_row {
+        flex-wrap: wrap;
+        row-gap: 12px;
+    }
+
+    .pill_row p {
+        width: 100%;
+    }
+
+    .concept_row {
+        margin-bottom: 50px;
+    }
+
+    .pill_row {
+        column-gap: 18px;
+        margin-bottom: 20px;
+    }
+
+    .download_pill {
+        height: 40px;
+    }
+
+}
+
+@media only screen and (max-width: 575px) {
+    .download_concept {
+        padding: 45px 0px;
+    }
+
+    .grid_conecpt {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+
+    .download_pill {
+        min-width: 100px;
+    }
+
+    .banner_content h1 br {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 424px) {
+    .pill_row {
+        column-gap: 8px;
+    }
+}

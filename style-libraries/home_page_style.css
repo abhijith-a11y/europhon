@@ -1,0 +1,355 @@
+/* global */
+
+/* ==================== Home page css ==================== */
+
+.banner_sec {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner_sec .tag_line {
+    margin-bottom: 35px;
+    letter-spacing: 2.1px;
+}
+
+.banner_sec .btn_style {
+    margin-top: 40px;
+}
+
+
+.tag_line {
+    text-transform: uppercase;
+    font-family: "RivieraNights-Regular";
+}
+
+
+.banner_content {
+    max-width: 1380px;
+}
+
+/* who we are */
+
+.who_we_are {
+    padding: 150px 0px;
+}
+
+.home_about {
+    max-width: 895px;
+    margin: 0 auto;
+}
+
+.highlight_text {
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    transition: all 0.2s linear;
+    font-family: "RivieraNights-Regular";
+    display: inline-block;
+}
+
+.highlight_text:hover {
+    opacity: 0.7;
+}
+
+/* home banner slider style */
+.mydiv {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.banner_sec_1 .banner_content {
+    margin-top: 90px;
+}
+
+/* Wrapper */
+.waper_page_slider {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Dots navigation inside wrapper */
+.slider-dots {
+    position: fixed;
+    top: 50%;
+    /* left: 2.5vw; */
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.slider-dots div {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    padding: 0px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.slider-dots span.border_dot {
+    border: 1px solid #fff;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s linear;
+}
+
+.slider-dots div.active span.border_dot {
+    border: 1px solid #fff;
+    padding: 2px;
+    width: 15px;
+    height: 15px;
+    border-radius: 100px;
+    transition: all 0.3s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-dots div span.inner_dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+    background: #fff;
+}
+
+.slider-dots.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+.waper_banner_mobile{
+    display: none;
+}
+
+/* Banner Main Slider */
+.waper_banner_main {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner-main-slider-item {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Banner Slider Pagination Dots */
+.banner-slider-dots {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 10;
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s ease;
+}
+
+.banner-slider-dots .banner-dot {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    padding: 0px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.banner-slider-dots .banner-dot span.border_dot {
+    border: 1px solid #fff;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s linear;
+}
+
+.banner-slider-dots .banner-dot.active span.border_dot {
+    border: 1px solid #fff;
+    padding: 2px;
+    width: 15px;
+    height: 15px;
+    border-radius: 100px;
+    transition: all 0.3s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-slider-dots .banner-dot span.inner_dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+    background: #fff;
+}
+
+.banner-slider-dots.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+
+
+
+
+/* ============ responsive ============ */
+
+@media only screen and (min-width: 1900px) {
+    .slider-dots {
+        left: 1%;
+    }
+}
+
+
+
+@media only screen and (min-width: 1680px) {
+
+    .banner_sec .tag_line {
+        margin-bottom: 55px;
+    }
+
+    .banner_sec .btn_style {
+        margin-top: 60px;
+    }
+}
+
+
+@media only screen and (max-width: 1365px) {
+    .banner_sec {
+        min-height: 700px;
+    }
+
+    .banner_content {
+        max-width: 970px;
+    }
+
+    .who_we_are {
+        padding: 135px 0px;
+    }
+
+    /* banner slider */
+    .banner_sec_1 .banner_content {
+        margin-top: 40px;
+    }
+
+
+}
+
+@media only screen and (max-width: 1199px) {
+    .banner_sec {
+        min-height: 600px;
+    }
+
+    .banner_content,
+    .home_about {
+        max-width: 850px;
+    }
+
+    .who_we_are {
+        padding: 120px 0px;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .banner_sec {
+        min-height: 560px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .highlight_text {
+        font-size: 16px;
+    }
+	.who_we_are {
+        padding: 100px 0px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .banner_sec .tag_line {
+        margin-bottom: 20px;
+    }
+
+    .banner_sec .btn_style {
+        margin-top: 30px;
+    }
+.waper_banner_mobile{
+    display: block;
+}
+.waper_page_slider{
+    display: none;
+}
+	.who_we_are {
+        padding: 80px 0px;
+    }
+
+    .highlight_text{font-size: 14px;}
+}
+
+@media only screen and (max-width: 575px) {
+    .who_we_are {
+        padding: 45px 0px;
+    }
+
+    .banner_sec {
+        min-height: 100vh;
+        padding: 100px 0px;
+    }
+
+    .f_32 {
+        font-size: 18px;
+    }
+}
+
+
+
+
+/* Banner Main Slider */
+.waper_banner_main {
+    position: relative;
+    width: 100%;
+}
+
+.banner-main-slider-item {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
